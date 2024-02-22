@@ -1,6 +1,36 @@
 /*!******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/otp-login.scss ***!
   \******************************************************************************************************************/
-.otp-login {
-  background: #fff; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.otp-container {
+  max-width: 400px;
+  width: 100%; }
+
+.otp-container .otp-form {
+  border-radius: 8px;
+  background-color: #F6F6F6;
+  border: 1px solid grey;
+  max-width: 375px;
+  margin: 0 auto;
+  width: 100%;
+  height: 250px; }
+  .otp-container .otp-form .otp-first-section .otp-close {
+    float: right;
+    padding-top: 23px;
+    padding-right: 24px; }
+  .otp-container .otp-form .otp-first-section .otp-logo {
+    width: 173px;
+    height: 32px;
+    margin: 0 auto;
+    padding-top: 78px; }
+    .otp-container .otp-form .otp-first-section .otp-logo img {
+      height: 100%;
+      width: 100%; }
 

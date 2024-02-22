@@ -1,3 +1,49 @@
-.otp-login {
-    background: #fff;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.otp-container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.otp-container {
+    .otp-form {
+        border-radius: 8px;
+        background-color: #F6F6F6;
+        border: 1px solid grey;
+        max-width: 375px;
+        margin: 0 auto;
+        width: 100%;
+        height: 250px;
+
+
+        .otp-first-section {
+            .otp-close {
+                float: right;
+                padding-top: 23px;
+                padding-right: 24px;
+            }
+
+            .otp-logo {
+                width: 173px;
+                height: 32px;
+                margin: 0 auto;
+                padding-top: 78px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
 }
