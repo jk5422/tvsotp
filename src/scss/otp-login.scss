@@ -1,49 +1,192 @@
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'avenir', sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: blueviolet;
 }
 
 .otp-container {
     max-width: 400px;
     width: 100%;
-}
+    overflow: auto;
 
-.otp-container {
     .otp-form {
         border-radius: 8px;
+        border: 0px solid grey;
         background-color: #F6F6F6;
-        border: 1px solid grey;
         max-width: 375px;
         margin: 0 auto;
         width: 100%;
-        height: 250px;
+        height: auto;
+
 
 
         .otp-first-section {
+            height: auto;
+            padding-bottom: 25px;
+            text-align: center;
+
             .otp-close {
                 float: right;
-                padding-top: 23px;
-                padding-right: 24px;
+
+                img {
+                    padding-top: 23px;
+                    padding-right: 24px;
+                }
             }
 
             .otp-logo {
                 width: 173px;
                 height: 32px;
                 margin: 0 auto;
-                padding-top: 78px;
+                padding: 78px 0 36px 0;
 
                 img {
+                    object-fit: contain;
                     height: 100%;
                     width: 100%;
                 }
             }
+
+            .otp-title {
+                padding-bottom: 15px;
+
+                h5 {
+                    margin: 0;
+                    line-height: 21.86px;
+                    font-size: 16px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    color: #404C49;
+                }
+            }
+
+            .otp-price {
+
+                h5 {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 27.32px;
+                    letter-spacing: 0.38px;
+                    color: #0D1917;
+                }
+
+                h5::before {
+                    content: "₹";
+                }
+
+                p {
+                    margin: 0;
+                    color: #717D7B;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16.39px;
+                }
+            }
         }
+
+        .otp-number-section {
+            height: auto;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border: 0px solid;
+            border-radius: 8px;
+            box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.07);
+
+
+            .otp-heading {
+                display: inline-block;
+                text-align: left;
+                padding-bottom: 12px;
+
+                span {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 21.86px;
+                    color: #2E2E2E;
+                }
+            }
+
+            .otp-input {
+                padding: 0 20px 21px 0;
+
+                form {
+                    margin: 0 auto;
+
+                    .mobile {
+                        width: 97%;
+                        border: 1px solid #CCCCCC;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 21.86px;
+                        text-decoration: #000000;
+                        border-radius: 3px;
+                        padding: 10px 0 10px 10px;
+                    }
+
+                    .sendbtn {
+                        width: 100%;
+                        border: 1px solid #CCCCCC;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: white;
+                        background-color: #CCCCCC;
+                        border-radius: 3px;
+                        padding: 10px;
+                        margin-top: 11px;
+                    }
+                }
+            }
+
+            .otp-privacy {
+                text-align: left;
+                padding-bottom: 43px;
+
+                p {
+                    margin: 0 auto;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #8E8E8E;
+                    line-height: 16.39px;
+
+                    span {
+                        color: #0091FF;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .otp-powerby {
+                text-align: center;
+                align-items: center;
+
+                span {
+                    color: #2E2E2E;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+
+                .question {
+                    padding-left: 5px;
+                }
+
+            }
+
+        }
+
     }
 
+}
 
-
+@media only screen and (max-width: 425px) {
+    .otp-container {
+        padding: 20px;
+    }
 }
