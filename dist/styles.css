@@ -36,8 +36,6 @@ body {
         .otp-container .otp-form .otp-first-section .otp-close img {
           padding-top: 23px;
           padding-right: 24px; }
-      .otp-container .otp-form .otp-first-section .otp-close:hover {
-        cursor: pointer; }
       .otp-container .otp-form .otp-first-section .otp-logo {
         width: 173px;
         height: 32px;
