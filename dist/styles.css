@@ -77,6 +77,41 @@ body {
       border: 0px solid;
       border-radius: 8px;
       box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.07); }
+      .otp-container .otp-form .otp-number-section .otp-details form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        width: 100%; }
+        .otp-container .otp-form .otp-number-section .otp-details form .names {
+          display: flex;
+          flex-direction: row;
+          gap: 5px; }
+        .otp-container .otp-form .otp-number-section .otp-details form .fname,
+        .otp-container .otp-form .otp-number-section .otp-details form .lname,
+        .otp-container .otp-form .otp-number-section .otp-details form .email {
+          width: 96%;
+          border: 1px solid #CCCCCC;
+          font-size: 16px;
+          font-weight: 500;
+          color: #000000;
+          background-color: #FFFFFF;
+          border-radius: 3px;
+          padding: 10px 0 10px 10px; }
+        .otp-container .otp-form .otp-number-section .otp-details form .submitbtn {
+          width: 100%;
+          border: 1px solid #CCCCCC;
+          font-size: 16px;
+          font-weight: 500;
+          color: white;
+          background-color: #CCCCCC;
+          border-radius: 3px;
+          padding: 10px; }
+          .otp-container .otp-form .otp-number-section .otp-details form .submitbtn.active {
+            background-color: #10846D; }
       .otp-container .otp-form .otp-number-section .otp-heading {
         display: inline-block;
         text-align: left;
@@ -88,6 +123,52 @@ body {
           color: #2E2E2E; }
       .otp-container .otp-form .otp-number-section .otp-input {
         padding: 0 0 21px 0; }
+        .otp-container .otp-form .otp-number-section .otp-input .otp-process {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          padding-top: 70px; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dots {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #10846D; }
+        .otp-container .otp-form .otp-number-section .otp-input .otp-process-text {
+          text-align: center;
+          margin: 0 auto;
+          padding: 38px 0 191px 0; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process-text p {
+            color: #2E2E2E;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.12px; }
+        .otp-container .otp-form .otp-number-section .otp-input .otp-text {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          justify-content: center; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-text img {
+            height: 16px;
+            width: 16px;
+            padding-top: 15px; }
+        .otp-container .otp-form .otp-number-section .otp-input .otp-box {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: center; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-box .otp-number {
+            width: 36px;
+            height: 40px;
+            border: 1px solid #CCCCCC;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #2E2E2E;
+            line-height: 27.32px; }
         .otp-container .otp-form .otp-number-section .otp-input form {
           margin: 0 auto;
           width: 100%; }
@@ -110,6 +191,8 @@ body {
             border-radius: 3px;
             padding: 10px;
             margin-top: 11px; }
+            .otp-container .otp-form .otp-number-section .otp-input form .sendbtn.active {
+              background-color: #10846D; }
       .otp-container .otp-form .otp-number-section .otp-privacy {
         text-align: left;
         padding-bottom: 43px; }
@@ -120,6 +203,18 @@ body {
           color: #8E8E8E;
           line-height: 16.39px; }
           .otp-container .otp-form .otp-number-section .otp-privacy p a {
+            color: #0091FF;
+            text-decoration: underline; }
+      .otp-container .otp-form .otp-number-section .otp-resend {
+        text-align: center;
+        padding-bottom: 43px; }
+        .otp-container .otp-form .otp-number-section .otp-resend p {
+          margin: 0 auto;
+          font-weight: 500;
+          font-size: 16px;
+          color: #2E2E2E;
+          line-height: 21.86px; }
+          .otp-container .otp-form .otp-number-section .otp-resend p a {
             color: #0091FF;
             text-decoration: underline; }
       .otp-container .otp-form .otp-number-section .otp-powerby {
@@ -138,5 +233,21 @@ body {
 @media only screen and (max-width: 425px) {
   .otp-container {
     margin: 0 auto;
-    padding: 20px; } }
+    padding: 20px;
+    overflow: auto; }
+    .otp-container .otp-form .otp-number-section .otp-input .otp-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .otp-container .otp-form .otp-number-section .otp-input .otp-box .otp-number {
+        height: 25px;
+        width: 25px;
+        border: 1px solid #CCCCCC;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: #2E2E2E;
+        line-height: 27.32px; } }
 

@@ -10,6 +10,7 @@ body {
     background-color: blueviolet;
 }
 
+
 .otp-container {
     max-width: 400px;
     width: 100%;
@@ -100,6 +101,54 @@ body {
             border-radius: 8px;
             box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.07);
 
+            .otp-details {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    padding-bottom: 20px;
+                    margin: 0 auto;
+                    width: 100%;
+
+                    .names {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+                    }
+
+                    .fname,
+                    .lname,
+                    .email {
+                        width: 96%;
+                        border: 1px solid #CCCCCC;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #000000;
+                        background-color: #FFFFFF;
+                        border-radius: 3px;
+                        padding: 10px 0 10px 10px;
+                    }
+
+                    .submitbtn {
+                        width: 100%;
+                        border: 1px solid #CCCCCC;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: white;
+                        background-color: #CCCCCC;
+                        border-radius: 3px;
+                        padding: 10px;
+
+                        &.active {
+                            background-color: #10846D;
+                        }
+                    }
+                }
+
+            }
+
 
             .otp-heading {
                 display: inline-block;
@@ -116,6 +165,70 @@ body {
 
             .otp-input {
                 padding: 0 0 21px 0;
+
+                .otp-process {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 70px;
+
+                    .dots {
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        background-color: #10846D;
+                    }
+                }
+
+
+
+                .otp-process-text {
+                    text-align: center;
+                    margin: 0 auto;
+                    padding: 38px 0 191px 0;
+
+                    p {
+                        color: #2E2E2E;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 19.12px;
+                    }
+                }
+
+                .otp-text {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    justify-content: center;
+
+                    img {
+                        height: 16px;
+                        width: 16px;
+                        padding-top: 15px;
+                    }
+                }
+
+                .otp-box {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    justify-content: center;
+
+                    .otp-number {
+                        width: 36px;
+                        height: 40px;
+                        border: 1px solid #CCCCCC;
+                        background-color: #FFFFFF;
+                        border-radius: 4px;
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #2E2E2E;
+                        line-height: 27.32px;
+                    }
+                }
 
                 form {
                     margin: 0 auto;
@@ -142,6 +255,10 @@ body {
                         border-radius: 3px;
                         padding: 10px;
                         margin-top: 11px;
+
+                        &.active {
+                            background-color: #10846D;
+                        }
                     }
                 }
             }
@@ -156,6 +273,24 @@ body {
                     font-size: 12px;
                     color: #8E8E8E;
                     line-height: 16.39px;
+
+                    a {
+                        color: #0091FF;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .otp-resend {
+                text-align: center;
+                padding-bottom: 43px;
+
+                p {
+                    margin: 0 auto;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #2E2E2E;
+                    line-height: 21.86px;
 
                     a {
                         color: #0091FF;
@@ -191,9 +326,40 @@ body {
 
 }
 
+
+// media query for mobile screen
 @media only screen and (max-width: 425px) {
     .otp-container {
         margin: 0 auto;
         padding: 20px;
+        overflow: auto;
+
+        .otp-form {
+            .otp-number-section {
+                .otp-input {
+                    .otp-box {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        .otp-number {
+                            height: 25px;
+                            width: 25px;
+                            border: 1px solid #CCCCCC;
+                            background-color: #FFFFFF;
+                            border-radius: 4px;
+                            text-align: center;
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: #2E2E2E;
+                            line-height: 27.32px;
+                        }
+                    }
+                }
+            }
+        }
+
     }
+
+
 }
