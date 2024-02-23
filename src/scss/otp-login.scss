@@ -40,6 +40,10 @@ body {
                 }
             }
 
+            .otp-close:hover {
+                cursor: pointer;
+            }
+
             .otp-logo {
                 width: 173px;
                 height: 32px;
@@ -115,13 +119,14 @@ body {
             }
 
             .otp-input {
-                padding: 0 20px 21px 0;
+                padding: 0 0 21px 0;
 
                 form {
                     margin: 0 auto;
+                    width: 100%;
 
                     .mobile {
-                        width: 97%;
+                        width: 96%;
                         border: 1px solid #CCCCCC;
                         font-size: 16px;
                         font-weight: 500;
@@ -156,7 +161,7 @@ body {
                     color: #8E8E8E;
                     line-height: 16.39px;
 
-                    span {
+                    a {
                         color: #0091FF;
                         text-decoration: underline;
                     }
@@ -165,16 +170,21 @@ body {
 
             .otp-powerby {
                 text-align: center;
-                align-items: center;
 
-                span {
-                    color: #2E2E2E;
-                    font-weight: 400;
-                    font-size: 12px;
-                }
 
-                .question {
-                    padding-left: 5px;
+                .otp-footer {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        color: #2E2E2E;
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+
                 }
 
             }
@@ -187,6 +197,7 @@ body {
 
 @media only screen and (max-width: 425px) {
     .otp-container {
+        margin: 0 auto;
         padding: 20px;
     }
 }
