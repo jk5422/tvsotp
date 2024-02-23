@@ -12,8 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: blueviolet; }
+  height: 100vh; }
 
 .payu-otp-login,
 .payu-otp-fill,
