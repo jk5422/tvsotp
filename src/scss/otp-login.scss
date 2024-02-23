@@ -10,13 +10,27 @@ body {
     background-color: blueviolet;
 }
 
+.payu-otp-login,
+.payu-otp-fill,
+.payu-otp-details,
+.payu-otp-process {
+    display: none;
 
-.otp-container {
+    &.block {
+        display: block;
+    }
+}
+
+
+.payu-otp-login,
+.payu-otp-fill,
+.payu-otp-details,
+.payu-otp-process {
     max-width: 400px;
     width: 100%;
     overflow: auto;
 
-    .otp-form {
+    .payu-otp-box {
         border-radius: 8px;
         border: 0px solid grey;
         background-color: #F6F6F6;
@@ -25,12 +39,12 @@ body {
         width: 100%;
         height: auto;
 
-        .otp-first-section {
+        .payu-otp-head-section {
             height: auto;
             padding-bottom: 25px;
             text-align: center;
 
-            .otp-close {
+            .payu-otp-close {
                 float: right;
 
                 img {
@@ -39,7 +53,7 @@ body {
                 }
             }
 
-            .otp-logo {
+            .payu-otp-logo {
                 width: 173px;
                 height: 32px;
                 margin: 0 auto;
@@ -52,10 +66,10 @@ body {
                 }
             }
 
-            .otp-title {
+            .payu-otp-title {
                 padding-bottom: 15px;
 
-                h5 {
+                .payu-otp-title-text {
                     margin: 0;
                     line-height: 21.86px;
                     font-size: 16px;
@@ -65,9 +79,9 @@ body {
                 }
             }
 
-            .otp-price {
+            .payu-otp-price-section {
 
-                h5 {
+                .payu-otp-price {
                     margin: 0;
                     font-size: 20px;
                     font-weight: 800;
@@ -76,11 +90,11 @@ body {
                     color: #0D1917;
                 }
 
-                h5::before {
+                .payu-otp-price::before {
                     content: "₹";
                 }
 
-                p {
+                .payu-otp-paymenttxt {
                     margin: 0;
                     color: #717D7B;
                     font-weight: 500;
@@ -90,7 +104,7 @@ body {
             }
         }
 
-        .otp-number-section {
+        .payu-otp-number-section {
             height: auto;
             margin: 0 auto;
             background-color: #FFFFFF;
@@ -99,8 +113,8 @@ body {
             border-radius: 8px;
             box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.07);
 
-            .otp-details {
-                form {
+            .payu-otp-person-detail {
+                .payu-otp-person-form {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -110,15 +124,15 @@ body {
                     margin: 0 auto;
                     width: 100%;
 
-                    .names {
+                    .payu-names {
                         display: flex;
                         flex-direction: row;
                         gap: 5px;
                     }
 
-                    .fname,
-                    .lname,
-                    .email {
+                    .payu-fname,
+                    .payu-lname,
+                    .payu-email {
                         width: 96%;
                         border: 1px solid #CCCCCC;
                         font-size: 16px;
@@ -129,7 +143,7 @@ body {
                         padding: 10px 0 10px 10px;
                     }
 
-                    .submitbtn {
+                    .payu-submitbtn {
                         width: 100%;
                         border: 1px solid #CCCCCC;
                         font-size: 16px;
@@ -148,7 +162,7 @@ body {
             }
 
 
-            .otp-heading {
+            .payu-otp-heading {
                 display: inline-block;
                 text-align: left;
                 padding-bottom: 12px;
@@ -161,10 +175,10 @@ body {
                 }
             }
 
-            .otp-input {
+            .payu-otp-input {
                 padding: 0 0 21px 0;
 
-                .otp-process {
+                .payu-otp-processing {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
@@ -181,6 +195,7 @@ body {
                         color: #10846D;
                         animation: dot-flashing 1s infinite linear alternate;
                         animation-delay: 0.5s;
+                        margin: 5px;
                     }
 
                     .dot-flashing::before,
@@ -192,7 +207,7 @@ body {
                     }
 
                     .dot-flashing::before {
-                        left: -15px;
+                        left: -20px;
                         width: 14px;
                         height: 14px;
                         border-radius: 50%;
@@ -203,7 +218,7 @@ body {
                     }
 
                     .dot-flashing::after {
-                        left: 15px;
+                        left: 20px;
                         width: 14px;
                         height: 14px;
                         border-radius: 50%;
@@ -227,12 +242,12 @@ body {
 
 
 
-                .otp-process-text {
-                    text-align: center;
+                .payu-otp-process-text {
                     margin: 0 auto;
                     padding: 38px 0 191px 0;
 
                     p {
+                        text-align: center;
                         color: #2E2E2E;
                         font-size: 14px;
                         font-weight: 500;
@@ -240,7 +255,7 @@ body {
                     }
                 }
 
-                .otp-text {
+                .payu-otp-text {
                     display: flex;
                     flex-direction: row;
                     gap: 5px;
@@ -253,13 +268,13 @@ body {
                     }
                 }
 
-                .otp-box {
+                .payu-otp-box {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
                     justify-content: center;
 
-                    .otp-number {
+                    .payu-otp-number {
                         width: 36px;
                         height: 40px;
                         border: 1px solid #CCCCCC;
@@ -273,11 +288,11 @@ body {
                     }
                 }
 
-                form {
+                .payu-otp-form {
                     margin: 0 auto;
                     width: 100%;
 
-                    .mobile {
+                    .payu-mobile {
                         width: 96%;
                         border: 1px solid #CCCCCC;
                         font-size: 16px;
@@ -288,7 +303,7 @@ body {
                         padding: 10px 0 10px 10px;
                     }
 
-                    .sendbtn {
+                    .payu-send-btn {
                         width: 100%;
                         border: 1px solid #CCCCCC;
                         font-size: 16px;
@@ -306,7 +321,7 @@ body {
                 }
             }
 
-            .otp-privacy {
+            .payu-otp-privacy {
                 text-align: left;
                 padding-bottom: 43px;
 
@@ -324,7 +339,7 @@ body {
                 }
             }
 
-            .otp-resend {
+            .payu-otp-resend {
                 text-align: center;
                 padding-bottom: 43px;
 
@@ -342,11 +357,11 @@ body {
                 }
             }
 
-            .otp-powerby {
+            .payu-otp-powerby {
                 text-align: center;
 
 
-                .otp-footer {
+                .payu-otp-footer {
                     display: flex;
                     flex-direction: row;
                     gap: 5px;
@@ -370,22 +385,28 @@ body {
 }
 
 
-// media query for mobile screen
+// media query for payu-mobile screen
 @media only screen and (max-width: 425px) {
-    .otp-container {
+
+    .payu-otp-login,
+    .payu-otp-fill,
+    .payu-otp-details,
+    .payu-otp-process {
         margin: 0 auto;
         padding: 20px;
         overflow: auto;
+    }
 
-        .otp-form {
-            .otp-number-section {
-                .otp-input {
-                    .otp-box {
+    .payu-otp-fill {
+        .payu-otp-number-section {
+            .payu-otp-input {
+                .payu-otp-form {
+                    .payu-otp-box {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
 
-                        .otp-number {
+                        .payu-otp-number {
                             height: 25px;
                             width: 25px;
                             border: 1px solid #CCCCCC;
@@ -403,6 +424,5 @@ body {
         }
 
     }
-
 
 }

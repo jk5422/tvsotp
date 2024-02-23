@@ -15,11 +15,28 @@ body {
   height: 100vh;
   background-color: blueviolet; }
 
-.otp-container {
+.payu-otp-login,
+.payu-otp-fill,
+.payu-otp-details,
+.payu-otp-process {
+  display: none; }
+  .payu-otp-login.block,
+  .payu-otp-fill.block,
+  .payu-otp-details.block,
+  .payu-otp-process.block {
+    display: block; }
+
+.payu-otp-login,
+.payu-otp-fill,
+.payu-otp-details,
+.payu-otp-process {
   max-width: 400px;
   width: 100%;
   overflow: auto; }
-  .otp-container .otp-form {
+  .payu-otp-login .payu-otp-box,
+  .payu-otp-fill .payu-otp-box,
+  .payu-otp-details .payu-otp-box,
+  .payu-otp-process .payu-otp-box {
     border-radius: 8px;
     border: 0px solid grey;
     background-color: #F6F6F6;
@@ -27,49 +44,82 @@ body {
     margin: 0 auto;
     width: 100%;
     height: auto; }
-    .otp-container .otp-form .otp-first-section {
+    .payu-otp-login .payu-otp-box .payu-otp-head-section,
+    .payu-otp-fill .payu-otp-box .payu-otp-head-section,
+    .payu-otp-details .payu-otp-box .payu-otp-head-section,
+    .payu-otp-process .payu-otp-box .payu-otp-head-section {
       height: auto;
       padding-bottom: 25px;
       text-align: center; }
-      .otp-container .otp-form .otp-first-section .otp-close {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-close,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-close,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-close,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-close {
         float: right; }
-        .otp-container .otp-form .otp-first-section .otp-close img {
+        .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-close img,
+        .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-close img,
+        .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-close img,
+        .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-close img {
           padding-top: 23px;
           padding-right: 24px; }
-      .otp-container .otp-form .otp-first-section .otp-logo {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-logo,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-logo,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-logo,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-logo {
         width: 173px;
         height: 32px;
         margin: 0 auto;
         padding: 78px 0 36px 0; }
-        .otp-container .otp-form .otp-first-section .otp-logo img {
+        .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-logo img,
+        .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-logo img,
+        .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-logo img,
+        .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-logo img {
           object-fit: contain;
           height: 100%;
           width: 100%; }
-      .otp-container .otp-form .otp-first-section .otp-title {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-title,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-title,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-title,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-title {
         padding-bottom: 15px; }
-        .otp-container .otp-form .otp-first-section .otp-title h5 {
+        .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-title .payu-otp-title-text,
+        .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-title .payu-otp-title-text,
+        .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-title .payu-otp-title-text,
+        .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-title .payu-otp-title-text {
           margin: 0;
           line-height: 21.86px;
           font-size: 16px;
           font-weight: 800;
           letter-spacing: 1px;
           color: #404C49; }
-      .otp-container .otp-form .otp-first-section .otp-price h5 {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price {
         margin: 0;
         font-size: 20px;
         font-weight: 800;
         line-height: 27.32px;
         letter-spacing: 0.38px;
         color: #0D1917; }
-      .otp-container .otp-form .otp-first-section .otp-price h5::before {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price::before,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price::before,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price::before,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-price::before {
         content: "₹"; }
-      .otp-container .otp-form .otp-first-section .otp-price p {
+      .payu-otp-login .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-paymenttxt,
+      .payu-otp-fill .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-paymenttxt,
+      .payu-otp-details .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-paymenttxt,
+      .payu-otp-process .payu-otp-box .payu-otp-head-section .payu-otp-price-section .payu-otp-paymenttxt {
         margin: 0;
         color: #717D7B;
         font-weight: 500;
         font-size: 12px;
         line-height: 16.39px; }
-    .otp-container .otp-form .otp-number-section {
+    .payu-otp-login .payu-otp-box .payu-otp-number-section,
+    .payu-otp-fill .payu-otp-box .payu-otp-number-section,
+    .payu-otp-details .payu-otp-box .payu-otp-number-section,
+    .payu-otp-process .payu-otp-box .payu-otp-number-section {
       height: auto;
       margin: 0 auto;
       background-color: #FFFFFF;
@@ -77,7 +127,10 @@ body {
       border: 0px solid;
       border-radius: 8px;
       box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.07); }
-      .otp-container .otp-form .otp-number-section .otp-details form {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -86,13 +139,25 @@ body {
         padding-bottom: 20px;
         margin: 0 auto;
         width: 100%; }
-        .otp-container .otp-form .otp-number-section .otp-details form .names {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-names,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-names,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-names,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-names {
           display: flex;
           flex-direction: row;
           gap: 5px; }
-        .otp-container .otp-form .otp-number-section .otp-details form .fname,
-        .otp-container .otp-form .otp-number-section .otp-details form .lname,
-        .otp-container .otp-form .otp-number-section .otp-details form .email {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-fname,
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-lname,
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-email,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-fname,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-lname,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-email,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-fname,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-lname,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-email,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-fname,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-lname,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-email {
           width: 96%;
           border: 1px solid #CCCCCC;
           font-size: 16px;
@@ -101,7 +166,10 @@ body {
           background-color: #FFFFFF;
           border-radius: 3px;
           padding: 10px 0 10px 10px; }
-        .otp-container .otp-form .otp-number-section .otp-details form .submitbtn {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn {
           width: 100%;
           border: 1px solid #CCCCCC;
           font-size: 16px;
@@ -110,27 +178,45 @@ body {
           background-color: #CCCCCC;
           border-radius: 3px;
           padding: 10px; }
-          .otp-container .otp-form .otp-number-section .otp-details form .submitbtn.active {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn.active,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn.active,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn.active,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-person-detail .payu-otp-person-form .payu-submitbtn.active {
             background-color: #10846D; }
-      .otp-container .otp-form .otp-number-section .otp-heading {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-heading,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-heading,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-heading,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-heading {
         display: inline-block;
         text-align: left;
         padding-bottom: 12px; }
-        .otp-container .otp-form .otp-number-section .otp-heading span {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-heading span,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-heading span,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-heading span,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-heading span {
           font-weight: 600;
           font-size: 16px;
           line-height: 21.86px;
           color: #2E2E2E; }
-      .otp-container .otp-form .otp-number-section .otp-input {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input {
         padding: 0 0 21px 0; }
-        .otp-container .otp-form .otp-number-section .otp-input .otp-process {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing {
           display: flex;
           flex-direction: row;
           gap: 10px;
           justify-content: center;
           align-items: center;
           padding-top: 70px; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing {
             position: relative;
             width: 14px;
             height: 14px;
@@ -138,15 +224,25 @@ body {
             background-color: #10846D;
             color: #10846D;
             animation: dot-flashing 1s infinite linear alternate;
-            animation-delay: 0.5s; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::before,
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::after {
+            animation-delay: 0.5s;
+            margin: 5px; }
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after {
             content: "";
             display: inline-block;
             position: absolute;
             top: 0; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::before {
-            left: -15px;
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::before {
+            left: -20px;
             width: 14px;
             height: 14px;
             border-radius: 50%;
@@ -154,8 +250,11 @@ body {
             color: #10846D;
             animation: dot-flashing 1s infinite alternate;
             animation-delay: 0s; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::after {
-            left: 15px;
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-processing .dot-flashing::after {
+            left: 20px;
             width: 14px;
             height: 14px;
             border-radius: 50%;
@@ -170,30 +269,48 @@ body {
   50%,
   100% {
     background-color: rgba(152, 128, 255, 0.2); } }
-        .otp-container .otp-form .otp-number-section .otp-input .otp-process-text {
-          text-align: center;
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text {
           margin: 0 auto;
           padding: 38px 0 191px 0; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process-text p {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text p,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text p,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text p,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-process-text p {
+            text-align: center;
             color: #2E2E2E;
             font-size: 14px;
             font-weight: 500;
             line-height: 19.12px; }
-        .otp-container .otp-form .otp-number-section .otp-input .otp-text {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text {
           display: flex;
           flex-direction: row;
           gap: 5px;
           justify-content: center; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-text img {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text img,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text img,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text img,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-text img {
             height: 16px;
             width: 16px;
             padding-top: 15px; }
-        .otp-container .otp-form .otp-number-section .otp-input .otp-box {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box {
           display: flex;
           flex-direction: row;
           gap: 10px;
           justify-content: center; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-box .otp-number {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box .payu-otp-number,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box .payu-otp-number,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box .payu-otp-number,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-box .payu-otp-number {
             width: 36px;
             height: 40px;
             border: 1px solid #CCCCCC;
@@ -204,10 +321,16 @@ body {
             font-weight: 500;
             color: #2E2E2E;
             line-height: 27.32px; }
-        .otp-container .otp-form .otp-number-section .otp-input form {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form {
           margin: 0 auto;
           width: 100%; }
-          .otp-container .otp-form .otp-number-section .otp-input form .mobile {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-mobile,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-mobile,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-mobile,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-mobile {
             width: 96%;
             border: 1px solid #CCCCCC;
             font-size: 16px;
@@ -216,7 +339,10 @@ body {
             text-decoration: #000000;
             border-radius: 3px;
             padding: 10px 0 10px 10px; }
-          .otp-container .otp-form .otp-number-section .otp-input form .sendbtn {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn {
             width: 100%;
             border: 1px solid #CCCCCC;
             font-size: 16px;
@@ -226,63 +352,96 @@ body {
             border-radius: 3px;
             padding: 10px;
             margin-top: 11px; }
-            .otp-container .otp-form .otp-number-section .otp-input form .sendbtn.active {
+            .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn.active,
+            .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn.active,
+            .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn.active,
+            .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-send-btn.active {
               background-color: #10846D; }
-      .otp-container .otp-form .otp-number-section .otp-privacy {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-privacy,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-privacy,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-privacy,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-privacy {
         text-align: left;
         padding-bottom: 43px; }
-        .otp-container .otp-form .otp-number-section .otp-privacy p {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-privacy p,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-privacy p,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-privacy p,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-privacy p {
           margin: 0 auto;
           font-weight: 500;
           font-size: 12px;
           color: #8E8E8E;
           line-height: 16.39px; }
-          .otp-container .otp-form .otp-number-section .otp-privacy p a {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-privacy p a,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-privacy p a,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-privacy p a,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-privacy p a {
             color: #0091FF;
             text-decoration: underline; }
-      .otp-container .otp-form .otp-number-section .otp-resend {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-resend,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-resend,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-resend,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-resend {
         text-align: center;
         padding-bottom: 43px; }
-        .otp-container .otp-form .otp-number-section .otp-resend p {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-resend p,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-resend p,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-resend p,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-resend p {
           margin: 0 auto;
           font-weight: 500;
           font-size: 16px;
           color: #2E2E2E;
           line-height: 21.86px; }
-          .otp-container .otp-form .otp-number-section .otp-resend p a {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-resend p a,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-resend p a,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-resend p a,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-resend p a {
             color: #0091FF;
             text-decoration: underline; }
-      .otp-container .otp-form .otp-number-section .otp-powerby {
+      .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-powerby,
+      .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-powerby,
+      .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-powerby,
+      .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-powerby {
         text-align: center; }
-        .otp-container .otp-form .otp-number-section .otp-powerby .otp-footer {
+        .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer,
+        .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer,
+        .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer,
+        .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer {
           display: flex;
           flex-direction: row;
           gap: 5px;
           justify-content: center;
           align-items: center; }
-          .otp-container .otp-form .otp-number-section .otp-powerby .otp-footer span {
+          .payu-otp-login .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer span,
+          .payu-otp-fill .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer span,
+          .payu-otp-details .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer span,
+          .payu-otp-process .payu-otp-box .payu-otp-number-section .payu-otp-powerby .payu-otp-footer span {
             color: #2E2E2E;
             font-weight: 400;
             font-size: 12px; }
 
 @media only screen and (max-width: 425px) {
-  .otp-container {
+  .payu-otp-login,
+  .payu-otp-fill,
+  .payu-otp-details,
+  .payu-otp-process {
     margin: 0 auto;
     padding: 20px;
     overflow: auto; }
-    .otp-container .otp-form .otp-number-section .otp-input .otp-box {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      .otp-container .otp-form .otp-number-section .otp-input .otp-box .otp-number {
-        height: 25px;
-        width: 25px;
-        border: 1px solid #CCCCCC;
-        background-color: #FFFFFF;
-        border-radius: 4px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color: #2E2E2E;
-        line-height: 27.32px; } }
+  .payu-otp-fill .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-otp-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .payu-otp-fill .payu-otp-number-section .payu-otp-input .payu-otp-form .payu-otp-box .payu-otp-number {
+      height: 25px;
+      width: 25px;
+      border: 1px solid #CCCCCC;
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: #2E2E2E;
+      line-height: 27.32px; } }
 
