@@ -130,11 +130,46 @@ body {
           justify-content: center;
           align-items: center;
           padding-top: 70px; }
-          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dots {
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing {
+            position: relative;
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background-color: #10846D; }
+            background-color: #10846D;
+            color: #10846D;
+            animation: dot-flashing 1s infinite linear alternate;
+            animation-delay: 0.5s; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::before,
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::before {
+            left: -15px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #10846D;
+            color: #10846D;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 0s; }
+          .otp-container .otp-form .otp-number-section .otp-input .otp-process .dot-flashing::after {
+            left: 15px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #10846D;
+            color: #10846D;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 1s; }
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #10846D; }
+  50%,
+  100% {
+    background-color: rgba(152, 128, 255, 0.2); } }
         .otp-container .otp-form .otp-number-section .otp-input .otp-process-text {
           text-align: center;
           margin: 0 auto;
